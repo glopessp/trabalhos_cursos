@@ -7,4 +7,5 @@ Cadastro de projetos.
 Atividade 1 - Linguagem C; Atividade da Faculdade
 Reajuste de salário. 
 
+mysql_exercicio - MySQL; Atividade da Faculdade
 
