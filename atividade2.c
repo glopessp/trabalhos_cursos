@@ -19,22 +19,22 @@ void cadastrarProjeto()
 {
 	projeto[totProjeto].codigo = totProjeto+1;
 	printf("Cadastrando projeto #%d\n", projeto[totProjeto].codigo);
-	printf("Insira do tÌtulo do projeto: \n");
+	printf("Insira do t√≠tulo do projeto: \n");
 	gets(projeto[totProjeto].titulo);
 	fflush(stdin);
-	printf("Insira a descriÁ„o do projeto: \n");
+	printf("Insira a descri√ß√£o do projeto: \n");
 	gets(projeto[totProjeto].descricao);
 	fflush(stdin);
 	printf("Insira o ano do projeto: \n");
 	scanf("%d", &projeto[totProjeto].ano);
 	fflush(stdin);
-	printf("Insira o status do projeto: \n1-A FAZER 2-FAZENDO 3-CONCLUÕDO\n");
+	printf("Insira o status do projeto: \n1-A FAZER 2-FAZENDO 3-CONCLU√çDO\n");
 	scanf("%d", &projeto[totProjeto].status);
 	fflush(stdin);
-	printf("Insira o gerente respons·vel: \n");
+	printf("Insira o gerente respons√°vel: \n");
 	gets(projeto[totProjeto].gerente);
 	fflush(stdin);
-	printf("Projeto È urgente? 1-SIM 0-N√O\n");
+	printf("Projeto √© urgente? 1-SIM 0-N√ÉO\n");
 	scanf("%d", &projeto[totProjeto].urgente);
 	fflush(stdin);
 	printf("Insira os requisitos do projeto: \n");
@@ -48,9 +48,9 @@ void cadastrarProjeto()
 void listarProjeto(int x)
 {
 	printf("=======================================\n");
-	printf("CÛdigo: %d\n", projeto[x].codigo);
-	printf("TÌtulo: %s\n", projeto[x].titulo);
-	printf("DescriÁ„o: %s\n", projeto[x].descricao);
+	printf("C√≥digo: %d\n", projeto[x].codigo);
+	printf("T√≠tulo: %s\n", projeto[x].titulo);
+	printf("Descri√ß√£o: %s\n", projeto[x].descricao);
 	printf("Ano: %d\n", projeto[x].ano);
 	if (projeto[x].status == 1)
 	{
@@ -62,7 +62,7 @@ void listarProjeto(int x)
 	}
 	if (projeto[x].status == 3)
 	{ 
-		printf("Status: ConcluÌdo\n");
+		printf("Status: Conclu√≠do\n");
 	}
 	printf("Gerente: %s\n", projeto[x].gerente);
 	if (projeto[x].urgente == 1)
@@ -71,7 +71,7 @@ void listarProjeto(int x)
 	}
 	if (projeto[x].urgente == 0)
 	{
-		printf("Urgente: N√O\n");
+		printf("Urgente: N√ÉO\n");
 	}
 	printf("Requisitos: %s\n", projeto[x].requisitos);
 	printf("Prazo Final: %s\n", projeto[x].prazoFinal);
@@ -82,13 +82,13 @@ void menu()
 	printf("=======================================\n");
 	printf("|  BEM-VINDO AO CADASTRO DE PROJETOS  |\n");
 	printf("=======================================\n");
-	printf("|    Digite a opÁ„o desejada:         |\n");
+	printf("|    Digite a op√ß√£o desejada:         |\n");
 	printf("|    1-CADASTRAR PROJETOS             |\n");
 	printf("|    2-LISTAR TODOS OS PROJETOS       |\n");
 	printf("|    3-LISTAR PROJETOS \"A FAZER\"      |\n");
 	printf("|    4-LISTAR PROJETOS \"FAZENDO\"      |\n");
-	printf("|    5-LISTAR PROJETOS \"CONCLUÕDO\"    |\n");
-	printf("|    6-BUSCAR POR C”DIGO              |\n"); 
+	printf("|    5-LISTAR PROJETOS \"CONCLU√çDO\"    |\n");
+	printf("|    6-BUSCAR POR C√ìDIGO              |\n"); 
 	printf("|    7-SAIR                           |\n"); 
 	printf("=======================================\n");
 }
@@ -166,7 +166,7 @@ int main()
 			break;
 		case 6:
 			system("cls");
-			printf("Digite o cÛdigo do projeto: ");
+			printf("Digite o c√≥digo do projeto: ");
 			scanf("%d", &cod);
 			fflush(stdin);
 			for(i=0;i<totProjeto;i++)
@@ -179,7 +179,7 @@ int main()
 			}
 			if (achou == 0)
 			{ 
-			printf("CÛdigo n„o encontrado.\n");
+			printf("C√≥digo n√£o encontrado.\n");
 			}
 			system("pause");
 			system("cls");
@@ -188,7 +188,7 @@ int main()
 		case 7:
 			exit(0);
 		default:
-			printf("OpÁ„o inv·lida.\n");
+			printf("Op√ß√£o inv√°lida.\n");
 			break;
 	}
 	return(0);
