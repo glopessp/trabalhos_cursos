@@ -7,7 +7,7 @@ int main()
 	int verificaAbono;
 
 	printf("=========== SILPH.CO ===========\n|        Gustavo Lopes         |\n|        RA: 20140509-5        |\n================================\n");
-	printf("  Digite o sal·rio lÌquido: \n     R$");
+	printf("  Digite o sal√°rio l√≠quido: \n     R$");
 	scanf("%f", &salario);
 	#define abono 150.00
 	reajuste = (salario/100)*7.5;
@@ -22,12 +22,12 @@ int main()
 	}
 	
 	printf("================================\n");
-	printf(" Sal·rio informado: R$%.2f\n Sal·rio reajustado: R$%.2f\n", salario, salarioFinal);
+	printf(" Sal√°rio informado: R$%.2f\n Sal√°rio reajustado: R$%.2f\n", salario, salarioFinal);
 	if (verificaAbono == 1) {
 		printf(" Recebe abono: SIM\n");
 	}
 	else {
-		printf(" Recebe abono: N√O\n");
+		printf(" Recebe abono: N√ÉO\n");
 	}
 	printf("================================\n");
 		
