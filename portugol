@@ -1,0 +1,95 @@
+Algoritmo cadCelular
+    Tipo
+        cadCelular = registro
+        codigo: inteiro
+        descricao: vetor[1..100] de caractere
+        marca, modelo: vetor[1..50] de caractere
+        preco: real
+    Fim_registro
+    
+    Procedimento cadastrarCelular
+    Inicio
+        Se (qtProduto < 100) entao
+            Escreva("Código do produto: ", qtProduto+1)
+            celular[qtProduto+1].codigo <- qtProduto + 1
+            Escreva("Digite o modelo do celular: ")
+            Leia(celular[qtProduto+1].modelo)
+            Escreva("Digite a marca do celular: ")
+            Leia(celular[qtProduto+1].marca)
+            Escreva("Digite a descrição do celular: ")
+            Leia(celular[qtProduto+1].descricao)
+            Escreva("Digite o preço: ")
+            Leia(celular[qtProduto+1].preco)
+            qtProduto <- qtProduto + 1
+            Escreva("CELULAR CADASTRADO!")
+        Senao
+            Escreva("Limite máximo atingido: 100 produtos!")
+        Fim_se
+        entrada <- 0
+    Fim_procedimento
+    
+    Procedimento listarTodos
+        Var
+            i: inteiro
+        Inicio
+            Para i de 1 ate qtProduto passo 1 faca:
+                Escreva("Código do Produto: ", celular[i].codigo)
+                Escreva("Modelo: ", celular[i].modelo)
+                Escreva("Marca: ", celular[i].marca)
+                Escreva("Descrição: ", celular[i].descricao)
+                Escreva("Preço: ", celular[i].preco) 
+                Escreva("-----------------------------------------")
+            Fim_para
+            entrada <- 0
+    Fim_procedimento
+
+    Funcao buscarProduto(cod: inteiro): inteiro
+        Var
+            i, cod: inteiro
+        Inicio
+            Escreva("Digite o código do produto: ")
+            Leia(cod)
+            Para i de 1 ate qtProduto passo 1 faca
+                Se (cod == celular[i].codigo) entao
+                    retorne i
+                Senao
+                    Escreva("Produto não encontrado.")
+                Fim_se
+            Fim_para
+    Fim_funcao
+    
+    Procedimento menu
+        Inicio
+            Escreva("Digite a opção desejada: ")
+            Escreva("1) Cadastrar produtos")
+            Escreva("2) Listar todos os produtos")
+            Escreva("3) Buscar produto")
+            Escreva("4) Sair")
+    Fim_procedimento
+
+Var
+    celular: vetor[1..100] de cadCelular
+    entrada, c, qtProduto, b: inteiro 
+Inicio
+    qtProduto <- 0
+    Repita
+        menu()
+        Leia(entrada) 
+        Caso (entrada)
+            Seja 1 faca
+                Para c de 1 ate 100 passo 1 faca
+                    cadastrarCelular ()
+                Fim_para
+            Seja 2 faca
+                listarTodos ()
+            Seja 3 faca
+                b <- buscarProduto()
+                Escreva("Código do Produto:”,celular[b].codigo)
+                Escreva("Modelo: ", celular[b].modelo)
+                Escreva("Marca: ", celular[b].marca)
+                Escreva("Descrição: ", celular[b].descricao)
+                Escreva("Preço: ", celular[b].preco)
+                entrada <- 0
+        Fim_caso
+    Ate_que (entrada = 4)
+Fim
