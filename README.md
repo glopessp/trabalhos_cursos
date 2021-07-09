@@ -9,3 +9,4 @@ Reajuste de salário.
 
 mysql_exercicio - MySQL; Atividade da Faculdade
 
+portugol - Português Estruturado; Atividade da Faculdade
